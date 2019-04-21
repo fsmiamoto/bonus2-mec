@@ -32,15 +32,15 @@ enum PLANETAS {
     JUPITER = 5,
 };
 
-/** Protótipos das funções utilizadas */
+/** Protótipos das funcoes utilizadas */
 
 void apresentaMenu();
 void realizaCalculos();
 void apresentaResultados();
 
-/** Variáveis utilizadas */
+/** Variaveis utilizadas */
 
-double raio, massa, gravidade; // Contém os valores do planeta selecionado
+double raio, massa, gravidade; // Contem os valores do planeta selecionado
 double alturaDeBurnout, velocidadeInicial;
 double momentoPorMassa;
 double C;
