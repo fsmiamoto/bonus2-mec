@@ -4,25 +4,25 @@
 
 /** Constantes utilizadas */
 
-#define RAIO_DE_MERCURIO  2439.7E3;// Em m
-#define MASSA_DE_MERCURIO  3.285E23; // Em kg
-#define GRAVIDADE_DE_MERCURIO  3.7; // Em m/s^2
+#define RAIO_DE_MERCURIO  2439.7E3// Em m
+#define MASSA_DE_MERCURIO  3.285E23 // Em kg
+#define GRAVIDADE_DE_MERCURIO  3.7 // Em m/s^2
 
-#define RAIO_DE_VENUS  6051.8E3;
-#define MASSA_DE_VENUS  4.867E24;
-#define GRAVIDADE_DE_VENUS  8.87; 
+#define RAIO_DE_VENUS  6051.8E3
+#define MASSA_DE_VENUS  4.867E24
+#define GRAVIDADE_DE_VENUS  8.87 
 
-#define RAIO_DE_TERRA  6371E3;
-#define MASSA_DE_TERRA  5.972E24;
-#define GRAVIDADE_DE_TERRA  9.807;
+#define RAIO_DE_TERRA  6371E3
+#define MASSA_DE_TERRA  5.972E24
+#define GRAVIDADE_DE_TERRA  9.807
 
-#define RAIO_DE_MARTE  3389.5E3; 
-#define MASSA_DE_MARTE  6.4174E23; 
-#define GRAVIDADE_DE_MARTE  3.711;
+#define RAIO_DE_MARTE  3389.5E3
+#define MASSA_DE_MARTE  6.4174E23 
+#define GRAVIDADE_DE_MARTE  3.711
 
-#define RAIO_DE_JUPITER  69911E3;
-#define MASSA_DE_JUPITER 1.898E27;
-#define GRAVIDADE_DE_JUPITER  24.79;
+#define RAIO_DE_JUPITER  69911E3
+#define MASSA_DE_JUPITER 1.898E27
+#define GRAVIDADE_DE_JUPITER  24.79
 
 #define PI 3.14
 
@@ -104,7 +104,7 @@ void apresentaMenu(){
 }
 
 void realizaCalculos(){
-    alturaDeBurnout = 0.29 * raio + raio; // Altura na qual a gravidade se reduz a 60%
+    alturaDeBurnout = 0.29 * raio + raio; // Altura na qual a gravidade se reduz a 60% 
 
     velocidadeDeEscape = sqrt((2*gravidade*pow(raio,2.0)) / (alturaDeBurnout));
     velocidadeCircular = velocidadeDeEscape / sqrt(2.0);
@@ -131,12 +131,12 @@ void realizaCalculos(){
 
     excentricidade = a / b;
 
-    periodoDaNave = ((2.0 * PI * a * b) / momentoPorMassa);
+    periodoDaNave = 2.0 * PI * a * b / momentoPorMassa;
 }
 
 void apresentaResultados(){
     printf("\nVelocidade de escape: %.2f m/s\n", velocidadeDeEscape);
-    printf("Altitude Maxima: %.2f m\n", altitudeMaxima);
+    printf("Altitude Maxima (acima da superficie): %.2f m\n", altitudeMaxima - raio);
     printf("Velocidade na altitude maxima: %.2f m/s\n", velocidadeNaAltitudeMaxima);
     printf("Periodo de orbita da nave: %.2f s\n", periodoDaNave);
     printf("Valor da excentricidade: %.2f\n\n", excentricidade);
