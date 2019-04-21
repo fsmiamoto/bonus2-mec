@@ -95,7 +95,7 @@ void apresentaMenu(){
             gravidade = GRAVIDADE_DE_JUPITER;
             break;
         default:
-            printf("Entrada inválida!\n\n");
+            printf("Entrada invalida!\n\n");
             apresentaMenu();
     }
 }
@@ -106,7 +106,7 @@ void realizaCalculos(){
     velocidadeDeEscape = sqrt((2*gravidade*pow(raio,2)) / (alturaDeBurnout));
     velocidadeCircular = velocidadeDeEscape / sqrt(2);
 
-    velocidadeInicial = 0.5 * (velocidadeCircular + velocidadeDeEscape); // Média aritmética
+    velocidadeInicial = 0.5 * (velocidadeCircular + velocidadeDeEscape); // Média aritmetica
 
     momentoPorMassa = velocidadeInicial * alturaDeBurnout;
 
