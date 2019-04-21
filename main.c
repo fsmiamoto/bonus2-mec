@@ -121,7 +121,7 @@ void realizaCalculos(){
 
     C = (1.0 / (alturaDeBurnout)) - GM_H2 ; // Constante C
 
-    altitudeMaxima = 1.0 / ( GM_H2 - C);
+    altitudeMaxima = 1.0 / ( GM_H2 - C) - raio;
 
     velocidadeNaAltitudeMaxima = momentoPorMassa / altitudeMaxima;
 
