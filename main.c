@@ -1,10 +1,16 @@
+/*
+    Estudantes:
+        Francisco Shigueo Miamoto - RA: 1450522
+        João Pedro Zanlorensi Cardoso - RA: 1937847
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-/** Constantes utilizadas */
+// Constantes utilizadas:
 
-#define RAIO_DE_MERCURIO  2439.7E3// Em m
+#define RAIO_DE_MERCURIO  2439.7E3 // Em m
 #define MASSA_DE_MERCURIO  3.285E23 // Em kg
 #define GRAVIDADE_DE_MERCURIO  3.7 // Em m/s^2
 
@@ -104,7 +110,7 @@ void apresentaMenu(){
 }
 
 void realizaCalculos(){
-    alturaDeBurnout = 0.29 * raio + raio; // Altura na qual a gravidade se reduz a 60% 
+    alturaDeBurnout = 1.29 * raio; // Altura na qual a gravidade se reduz a 60% 
 
     velocidadeDeEscape = sqrt((2*gravidade*pow(raio,2.0)) / (alturaDeBurnout));
     velocidadeCircular = velocidadeDeEscape / sqrt(2.0);
