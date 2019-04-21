@@ -65,8 +65,9 @@ int main(){
 void apresentaMenu(){
     int escolha;
 
-    printf("Selecione o planeta desejado: \n");
-    printf("1) Mercurio\n2) Venus\n3) Terra\n4) Marte\n5) Jupiter\n");
+    printf("- - - - - Lista de planetas - - - - -\n\n");
+    printf("1) Mercurio\n2) Venus\n3) Terra\n4) Marte\n5) Jupiter\n\n");
+    printf("Selecione o planeta desejado: ");
 
     scanf("%d", &escolha);
 
@@ -121,7 +122,7 @@ void realizaCalculos(){
 
     C = (1.0 / (alturaDeBurnout)) - GM_H2 ; // Constante C
 
-    altitudeMaxima = 1.0 / ( GM_H2 - C) - raio;
+    altitudeMaxima = 1.0 / ( GM_H2 - C);
 
     velocidadeNaAltitudeMaxima = momentoPorMassa / altitudeMaxima;
 
@@ -134,10 +135,9 @@ void realizaCalculos(){
 }
 
 void apresentaResultados(){
-    printf("Velocidade de escape: %.2f m/s\n", velocidadeDeEscape);
+    printf("\nVelocidade de escape: %.2f m/s\n", velocidadeDeEscape);
     printf("Altitude Maxima: %.2f m\n", altitudeMaxima);
     printf("Velocidade na altitude maxima: %.2f m/s\n", velocidadeNaAltitudeMaxima);
     printf("Periodo de orbita da nave: %.2f s\n", periodoDaNave);
     printf("Valor da excentricidade: %.2f\n\n", excentricidade);
-
 }
