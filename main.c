@@ -106,7 +106,11 @@ void realizaCalculos(){
     velocidadeDeEscape = sqrt((2*gravidade*pow(raio,2)) / (alturaDeBurnout));
     velocidadeCircular = velocidadeDeEscape / sqrt(2);
 
-    velocidadeInicial = 0.5 * (velocidadeCircular + velocidadeDeEscape); // Média aritmetica
+    '''
+        Numa trajetoria eliptica, a velocidade de lancamento deve estar entre as velocidades circular e de escape.
+        Para a simulacao, utilizamos a velocidade de lancamento como a media aritmetica dessas velocidades:
+    '''
+    velocidadeInicial = 0.5 * (velocidadeCircular + velocidadeDeEscape); 
 
     momentoPorMassa = velocidadeInicial * alturaDeBurnout;
 
