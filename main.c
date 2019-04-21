@@ -24,6 +24,8 @@
 #define MASSA_DE_JUPITER 1.898E27;
 #define GRAVIDADE_DE_JUPITER  24.79;
 
+#define PI 3.14
+
 enum PLANETAS {
     MERCURIO = 1,
     VENUS = 2,
@@ -101,7 +103,7 @@ void apresentaMenu(){
 }
 
 void realizaCalculos(){
-    alturaDeBurnout = 0.29 * raio; // Altura na qual a gravidade se reduz a 60%
+    alturaDeBurnout = 0.29 * raio + raio; // Altura na qual a gravidade se reduz a 60%
 
     velocidadeDeEscape = sqrt((2*gravidade*pow(raio,2.0)) / (alturaDeBurnout));
     velocidadeCircular = velocidadeDeEscape / sqrt(2.0);
@@ -115,7 +117,7 @@ void realizaCalculos(){
 
     momentoPorMassa = velocidadeInicial * alturaDeBurnout;
 
-    double GM_H2 = (pow(gravidade,2.0) * pow(raio, 4.0)) / pow(momentoPorMassa, 2.0); // Valor de GM / h^2
+    double GM_H2 = (gravidade * pow(raio, 2.0)) / pow(momentoPorMassa, 2.0); // Valor de GM / h^2
 
     C = (1.0 / (alturaDeBurnout)) - GM_H2 ; // Constante C
 
@@ -128,7 +130,7 @@ void realizaCalculos(){
 
     excentricidade = a / b;
 
-    periodoDaNave = 2 * pi() * a * b / momentoPorMassa
+    periodoDaNave = ((2.0 * PI * a * b) / momentoPorMassa);
 }
 
 void apresentaResultados(){
